@@ -1,4 +1,4 @@
-dblLinear(100);
+
 function dblLinear(n) {
     
     let array = [1];
@@ -7,7 +7,7 @@ function dblLinear(n) {
     let b = Fz(1);
     array.push(a,b);
     let valores =[a,b];
-    for(let i=0; i<n+100;i++){
+    for(let i=0; i<n*n;i++){
         let v = valores.shift();
         a = Fy(v);
         b = Fz(v);
@@ -20,7 +20,6 @@ function dblLinear(n) {
         obj[value] = 0;
     }
     array = Object.keys(obj);
-    console.log(n,array[99],array[100],array[101]);
     return parseInt(array[n]);
    
   }        
